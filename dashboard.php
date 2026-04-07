@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include "db.php";
@@ -31,7 +32,7 @@ if (isset($_GET['delete'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<img class="bvec" src="Bvec_img.jpeg" alt="bvec">
 <h2>Welcome <?php echo $_SESSION['user']; ?></h2>
 <a href="logout.php">Logout</a>
 
@@ -46,7 +47,7 @@ if (isset($_GET['delete'])) {
     </form>
 </div>
 
-<div class="container">
+<div class="container" style="color:aquamarine;">
     <h3>Student List</h3>
 
     <table border="1" width="100%">
