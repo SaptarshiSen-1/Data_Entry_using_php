@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<img class="bvec" src="Bvec_img.jpeg" alt="bvec">
 <div class="container">
     <h1 style="text-align: center;">Login</h1>
     <form method="POST">
@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
         <button name="login">Login</button>
     </form>
     <br>
-    <a href="register.php">Not Login Then Register</a>
+    <a href="register.php" style="color:white">Not Login Then Register</a>
 </div>
 
 </body>
