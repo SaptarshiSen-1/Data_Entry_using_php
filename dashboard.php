@@ -11,9 +11,10 @@ if (isset($_POST['add'])) {
     $name = $_POST['name'];
     $age = $_POST['age'];
     $course = $_POST['course'];
+    $college = $_POST['college'];
 
-    $sql = "INSERT INTO students (name, age, course)
-            VALUES ('$name', '$age', '$course')";
+    $sql = "INSERT INTO students (name, age, course, college)
+            VALUES ('$name', '$age', '$course', '$college')";
     $conn->query($sql);
 }
 
@@ -40,6 +41,7 @@ if (isset($_GET['delete'])) {
         <input type="text" name="name" placeholder="Name" required>
         <input type="number" name="age" placeholder="Age" required>
         <input type="text" name="course" placeholder="Course" required>
+        <input type="text" name="college" placeholder="College Name" required>
         <button name="add">Add</button>
     </form>
 </div>
@@ -53,6 +55,7 @@ if (isset($_GET['delete'])) {
             <th>Name</th>
             <th>Age</th>
             <th>Course</th>
+            <th>College</th>
             <th>Action</th>
         </tr>
 
@@ -65,8 +68,9 @@ if (isset($_GET['delete'])) {
                     <td>{$row['name']}</td>
                     <td>{$row['age']}</td>
                     <td>{$row['course']}</td>
+                    <td>{$row['college']}</td>
                     <td>
-                        <a href='dashboard.php?delete={$row['id']}'>Delete</a>
+                        <a href='dashboard.php?delete={$row['id']}' onclick=\"return confirm('Are you sure?')\">Delete</a>
                     </td>
                   </tr>";
         }
